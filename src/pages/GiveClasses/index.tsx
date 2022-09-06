@@ -21,7 +21,7 @@ function GiveClasses() {
                 <Text style={styles.description}>Para começar, você precisa se cadastrar como professor na nossa plataforma web.</Text>
             </ImageBackground>
 
-            <RectButton onPress={handleNavigateBack} style={styles.okButton}>
+            <RectButton onPress={handleNavigateBack } style={styles.okButton}>
                 <Text style={styles.okButtonText}>Tudo Bem</Text>
             </RectButton>
 
