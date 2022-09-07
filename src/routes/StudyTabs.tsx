@@ -1,15 +1,60 @@
 import React from "react";
-import { createBottomTabNavigator} from '@react-navigation/bottom-tabs'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { Ionicons} from '@expo/vector-icons'
 import TeacherList from "../pages/TeacherList";
 import Favorites from "../pages/Favorites";
 
-const { Navigator, Screen} = createBottomTabNavigator()
+const { Navigator, Screen } = createBottomTabNavigator()
 
 function StudyTabs() {
     return (
-        <Navigator>
-            <Screen name="TeacherList" component={TeacherList} />
-            <Screen name="Favorites" component={Favorites} />
+        <Navigator screenOptions={{
+            tabBarStyle: {
+                elevation: 0,
+                shadowOpacity: 0,
+                height: 64, 
+                flexDirection: 'row',
+                alignItems: "center",
+                justifyContent: "center",                                                
+            },
+            tabBarIconStyle:{
+                flex: 0,
+                width: 20,
+                height: 20,
+                
+
+            },
+            tabBarLabelStyle: {
+                fontFamily: 'Archivo_700Bold',
+                fontSize: 13,
+                marginLeft: 16,
+            },
+            tabBarInactiveBackgroundColor: '#FAFAFC',
+            tabBarActiveBackgroundColor: '#EBEBF5',
+            tabBarInactiveTintColor: "#C1BCCC",
+            tabBarActiveTintColor: "#32264D"
+            
+        
+
+        }}>
+            <Screen options={{
+                tabBarLabel: 'Proffys',
+                tabBarIcon: ({color, size}) => {
+                    return (
+                        <Ionicons name="ios-easel" size={size} color={color} />
+                    )
+                }
+            }} name="TeacherList" component={TeacherList} />
+            <Screen 
+            options={{
+                tabBarLabel: 'Favoritos',
+                tabBarIcon: ({color, size}) => {
+                    return(
+                        <Ionicons name="ios-heart" size={size} color={color} />
+                    )
+                }
+            }}
+            name="Favorites" component={Favorites} />
 
         </Navigator>
     )
