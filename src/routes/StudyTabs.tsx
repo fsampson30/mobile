@@ -12,10 +12,13 @@ function StudyTabs() {
             tabBarStyle: {
                 elevation: 0,
                 shadowOpacity: 0,
-                height: 64, 
+                height: 64,                                            
+            },
+            tabBarItemStyle: {
                 flexDirection: 'row',
                 alignItems: "center",
-                justifyContent: "center",                                                
+                justifyContent: "center",     
+
             },
             tabBarIconStyle:{
                 flex: 0,
