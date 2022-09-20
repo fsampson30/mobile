@@ -43,7 +43,43 @@ const styles = StyleSheet.create({
         fontSize: 12,
         marginTop: 4
 
-    }
+    },
+
+    bio: {
+        marginHorizontal: 24,
+        fontFamily: 'Poppins_400Regular',
+        fontSize: 14,
+        lineHeight: 24,
+        color: '#6A6180'
+    },
+
+    footer: {
+
+    },
+
+    price: {
+
+    },
+
+    priceValue: {
+
+    },
+
+    buttonsContainer: {
+
+    },
+
+    favoriteButton: {
+
+    },
+
+    contactButton: {
+
+    },
+
+    contactButtonText: {
+
+    },
 
 })
 
