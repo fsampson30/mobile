@@ -10,10 +10,11 @@ import './styles'
 import styles from './styles'
 
 interface PageHeaderProps {
-    title: string
+    title: string,
+    children: React.ReactNode
 }
 
-const PageHeader: React.FC<PageHeaderProps> = ({ title }) => {
+const PageHeader: React.FunctionComponent<PageHeaderProps> = (props) => {
 
     const navigation = useNavigation()
 
@@ -29,9 +30,8 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title }) => {
                 </BorderlessButton>
                 <Image source={logoImg} resizeMode='contain' />
             </View>
-            <Text style={styles.title}>
-                {title}
-            </Text>
+            <Text style={styles.title}>{props.title}</Text>
+            {props.children}
         </View>
     )
 }
