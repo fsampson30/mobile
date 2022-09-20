@@ -78,6 +78,11 @@ const styles = StyleSheet.create({
         marginTop: 16
     },
 
+    favorite: {
+        backgroundColor: '#E33D3D'
+
+    },
+
     favoriteButton: {
         backgroundColor: '#8257E5',
         width: 56,
