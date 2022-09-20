@@ -20,8 +20,10 @@ function TeacherItem() {
             Eu quebrei uma linha aqui.
             </Text>
             <View style={styles.footer}>
-                <Text style={styles.price}>Preço/hora {'   '}</Text>
-                <Text style={styles.priceValue}>R$ 20,00{'   '}</Text>
+                <Text style={styles.price}>
+                    Preço/hora {'   '}
+                    <Text style={styles.priceValue}>R$ 20,00{'   '}</Text>
+                </Text>                
                 <View style={styles.buttonsContainer}>
                     <RectButton style={styles.favoriteButton}>
                         <Image source={heartOutlineIcon}/>
