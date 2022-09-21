@@ -11,6 +11,7 @@ import styles from './styles'
 
 interface PageHeaderProps {
     title: string,
+    headerRight?: React.ReactNode,
     children: React.ReactNode
 }
 
@@ -30,7 +31,10 @@ const PageHeader: React.FunctionComponent<PageHeaderProps> = (props) => {
                 </BorderlessButton>
                 <Image source={logoImg} resizeMode='contain' />
             </View>
-            <Text style={styles.title}>{props.title}</Text>
+            <View style={styles.header}>
+                <Text style={styles.title}>{props.title}</Text>
+                {props.headerRight}
+            </View>
             {props.children}
         </View>
     )
